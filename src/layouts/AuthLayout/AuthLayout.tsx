@@ -1,14 +1,15 @@
 import React from 'react'
-import AuthHeader from '../components/AuthHeader'
+import AuthHeader from './AuthHeader'
 import { Outlet } from 'react-router-dom'
+import Footer from 'src/components/Footer'
 
 const AuthLayout = ({ children }: any) => {
   return (
-    <div className='py-16'>
-      <div className='container'>
-        <Outlet />
-      </div>
-    </div>
+    <>
+      <AuthHeader />
+      {children}
+      <Footer />
+    </>
   )
 }
 
